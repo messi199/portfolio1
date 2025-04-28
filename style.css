@@ -27,6 +27,19 @@
      0 0 100px rgba(18, 247, 255, 0.3),
     0 0 150px rgba(18, 247, 255, 0.3);
 }
+
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--bg-color2);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
@@ -211,7 +224,7 @@ a.btn:nth-child(2)::before{
     display: flex;
     justify-content: space-between;
     width: 220px;
-    height: center;
+    height: 40px;
 
 }
 .social-icons a{
@@ -312,6 +325,8 @@ a.btn:nth-child(2)::before{
 .main-text h2{
     font-weight: 700;
     font-size: var(--normal-font);
+    color: var(--hover-color);
+  
 }
 .main-text span{
     color: #fdfdfd;
@@ -341,6 +356,7 @@ a.btn:nth-child(2)::before{
 }
 .service-box:hover{
     transform:translateY(-.7rem);
+ 
 }
 /* 
 .service-icon{
@@ -475,9 +491,75 @@ a.btn:nth-child(2)::before{
 /* Portfolio css */
 
 .portfolio-gallery{
-    display: flex;
+    display: block;
 }
 
+.port-image img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  
+}
+
+
+
+/* Contact css */
+
+.contact{
+    background: var(--bg-color2);
+    width: 100%;
+}
+.contact form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+.contact form input, .contact form textarea{
+    width: 100%;
+    padding: .7rem;
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.contact form textarea {
+    resize: none;
+}
+.formBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.formBtn .btn{
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* footer css */
+footer{
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer p{
+    color: #bdbdbd;
+}
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+}
+footer a i{
+    font-size: 1rem;
+    color: var(--bg-color2);
+}
 
 
 
