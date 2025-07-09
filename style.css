@@ -705,78 +705,46 @@ w
 
 /* Contact Section */
 .contact {
-    background: var(--bg-color2);
-}
-
-.contact form {
-    text-align: center;
-    max-width: 50rem;
-    margin: 1rem auto;
-    margin-bottom: 3rem;
-}
-
-.contact form label {
-    display: block;
-    text-align: left;
-    margin-bottom: 0.3rem;
-    color: var(--text-color);
-}
-
-.contact form input,
-.contact form textarea {
-    width: 100%;
-    padding: .7rem;
-    margin-bottom: .8rem;
-    border: none;
-    border-radius: 5px;
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-
-.contact form textarea {
-    resize: none;
-}
-
-/* Contact Section Styling */
-.contact {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #2c2c2c; /* Dark background */
     text-align: center;
+    color: #f5f5f5; /* Light text color */
 }
 
+/* Heading */
 .contact .main-text {
     margin-bottom: 30px;
 }
-
 .contact .main-text span {
     display: block;
     font-size: 18px;
-    color: #555;
+    color: #b3b3b3;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
 .contact .main-text h2 {
     font-size: 36px;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
 }
 
-
+/* Contact Form */
 .contact form {
     max-width: 600px;
     margin: 0 auto;
-    background: #fff;
+    background: var(--bg-color);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #957c7c;
+    border: 1px solid #444;
 }
 
 .contact form label {
     display: block;
     font-size: 14px;
-    color: #333;
+    color: #ccc;
     margin-bottom: 8px;
     text-align: left;
 }
@@ -786,11 +754,11 @@ w
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     border-radius: 5px;
     font-size: 14px;
-    color: #555;
-    background: #f9f9f9;
+    color: #342424;
+    background: white;
     transition: border-color 0.3s ease;
 }
 
@@ -798,81 +766,60 @@ w
 .contact form textarea:focus {
     border-color: #007bff;
     outline: none;
-    background: hsl(0, 32%, 93%);
+    background: #b7b3b3;
 }
 
-/* Contact Section Styling */
-.contact {
-    padding: 50px 20px;
-    background-color: #2c2c2c; /* Light black background */
-    text-align: center;
-    color: #f5f5f5; /* Light text color for contrast */
-}
-.con{
-    letter-spacing: 1px ;
-    padding: 10px;
-    margin: 10px;
-}
-.con a i{
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: var(--hover-color);
-    transition: color 0.3s;
-    font-size: 30px;
-    font-weight: 500;
-}
-.con a i:hover {
-    color: #007bff; /* Change color on hover */
-}
-.contact .main-text span {
-    color: #b3b3b3; /* Softer text color for the subtitle */
-}
-
-.contact .main-text h2 {
-    color: #ffffff; /* Bright white for the heading */
-}
-
-.contact form {
-    background: var(--bg-color); /* Slightly darker form background */
-    color: #957c7c; /* Light text color for form elements */
-    border: 1px solid #444; /* Subtle border for the form */
-}
-
-.contact form input,
-.contact form textarea {
-    background: var(--bg-color); /* Match the section background */
-    color: #342424; /* Light text color */
-    border: 1px solid #555; /* Subtle border for inputs */
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    background: #b7b3b3; /* Slightly lighter background on focus */
-}
-
-.contact .btn-box .btn {
-    background-color: #007bff; /* Button color */
-    color: #fff; /* Button text color */
-}
-
-.contact .btn-box .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
+/* Submit Button */
 .formBtn {
     display: flex;
     justify-content: center;
     width: 100%;
+  
+    
 }
-
-.formBtn .btn {
+.button{
+    color: var(--hover-color);
+   background: var(--bg-color);
+}
+.contact_input{
+    height: 150px;
+}
+.formBtn .btn,
+.contact .btn-box .btn {
     cursor: pointer;
     font-size: 1rem;
     border-radius: 40px;
-    
     padding: 0.5rem 2rem;
-    background: var(--hover-color);
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease;
 }
+
+.formBtn .btn:hover,
+.contact .btn-box .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Social Icons */
+/* .con {
+    letter-spacing: 1px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.con a i {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--hover-color);
+    transition: color 0.3s;
+}
+
+.con a i:hover {
+    color: #007bff;
+} */
+
 
 /* Footer Section */
 footer {

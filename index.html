@@ -6,6 +6,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <!-- header section -->
@@ -54,7 +56,7 @@
                 </div>
             </div>
             <div class="btn-box">
-                <!-- <a href="#" class="btn"> Download CV</a> -->
+                <a href="#" class="btn"> Download CV</a>
                 <a href="#" class="btn">Hire Me Now!</a>
             </div>
             <div class="social-icons">
@@ -62,6 +64,7 @@
                 <a href="https://t.me/Messi_1717"><i class='bx bxl-telegram' ></i></a>
                 <a href="https://www.instagram.com/mesfing1717?igsh=MWRkeTBwMDd1bTBscg=="><i class='bx bxl-instagram-alt' ></i></a>
                 <a href="https://github.com/messi199"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/mesfin-getahun-78947a35a"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
         <div class="home-image">
@@ -307,32 +310,36 @@
             <span>Feel Free to Reach Out</span>
             <h2>Contact Me</h2>
         </div>
-         <div class="con">
+         <!-- <div class="con">
         <h3>Email</h3>
         <p>mesfing1717@gmail.com</p>
         <h4>Phone </h4>
         <p>+251 944171799</p>
         <h3>Telegram</h3>
         <a href="https://t.me/Messi_1717"><i class='bx bxl-telegram' ></i></a>
-         </div>
-        <!-- <form action="#">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter your full name">
-            
-            <label for="email">Your Email</label>
-            <input type="email" id="email" placeholder="Enter your email address">
-            
-            <label for="phone">Phone Number</label>
-            <input type="number" id="phone" placeholder="Enter your phone number">
-            
-            <label for="message">Your Message</label>
-            <textarea id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
-            
-            <div class="btn-box formBtn">
-                <button type="submit" class="btn">Send Message</button>
-            </div>
+         </div> -->
+         <form action="https://formspree.io/f/mvgrjaoz" method="POST" class="contact__form">
+            <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
+              </div>
+        
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
+              </div>
+        
+              <div class="input-wrapper">
+                <i class="fas fa-comment"></i>
+                <textarea name="message" placeholder="Your message" class="contact__input contact_input" required></textarea>
+              </div>
+        
+              <input type="submit" value="Send" class="contact__button button">
         </form>
-         -->
+        <div id="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
+        
+
+
     </section>
      <!-- Footer Section -->
       <footer>
@@ -343,5 +350,46 @@
       </footer>
 
     <script src="script.js"></script>
+    <script>
+        
+// ScrollReveal animation for contact form
+ScrollReveal().reveal('.contact__form', {
+    delay: 300,
+    distance: '40px',
+    origin: 'bottom',
+    duration: 800,
+    reset: false
+  });
+  
+  // Contact form submit handler
+  const form = document.querySelector(".contact__form");
+  const status = document.getElementById("form-status");
+  
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          status.innerHTML = "✅ Message sent successfully!";
+          form.reset();
+        } else {
+          status.innerHTML = "❌ Oops! Something went wrong.";
+        }
+      } catch (error) {
+        status.innerHTML = "❌ Error: " + error.message;
+      }
+    });
+  }
+    </script>
 </body>
 </html>
